@@ -1,0 +1,233 @@
+body {
+  background-image: url(../img/background.png);
+  background-size: cover;
+  background-color: rgb(255, 236, 199);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow: overlay;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* side navigation bar */
+#sideNav {
+  /* glass effect */
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+
+  height: 93%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 2%;
+  left: 10px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  text-align: center;
+
+  border: none;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+#sideNav .links {
+  background: rgba(0, 0, 0, 0.25);
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.15);
+  margin-top: 80px;
+}
+
+#sideNav a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgba(150, 150, 150);
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+#sideNav a:hover {
+  cursor: pointer;
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+#sideNav a.active {
+  color: white;
+}
+
+#sideNav .closebtn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 36px;
+  margin-left: 0;
+}
+
+#sideNav .social {
+  position: fixed;
+  bottom: 20px;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.15);
+}
+
+#sideNav .fa-linkedin {
+  transform: translateX(-50px);
+}
+
+#sideNav .fa-linkedin:hover {
+  background: rgba(0, 124, 181, 0.75);
+}
+
+#sideNav .fa-github {
+  transform: translateX(0px);
+}
+
+#sideNav .fa-github:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+#menu {
+  position: fixed;
+  top: 2%;
+  left: 10px;
+
+  width: 15px;
+  height: 93%;
+
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.15);
+  padding: 1px;
+}
+
+#menu:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#menu #arrow {
+  position: relative;
+  top: 40%;
+  font-size: x-large;
+}
+
+/* main page content */
+.main {
+  /*position: relative;*/
+  height: 100%;
+  width: 100%;
+  /*transform: translateY(0px);*/
+}
+
+/* things holding the content */
+.container {
+  /* glass effect */
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 100px auto;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  width: 50%;
+
+  /* shifts to the left and moves up and down */
+  /*transform: translateX(-100px) rotateX(0deg) rotatey(0deg) perspective(0px);*/
+  transform: translateX(-100px);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.container h1,
+p {
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+}
+
+.container:hover {
+  /*transform: translateX(-100px) rotateX(30deg) rotatey(-30deg) perspective(100px);*/
+  transform: translateX(10px);
+  /*rotateX(10deg) rotatey(10deg) perspective(10px);*/
+  box-shadow: -10px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.container2 {
+  /* glass effect */
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 100px auto;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  width: 50%;
+  perspective: 50px;
+
+  /* shifts to the right and moves up and down */
+  transform: translateX(100px);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.container2:hover {
+  transform: translateX(-10px);
+  /*rotateX(-10deg) rotatey(-10deg) perspective(10px);*/
+  box-shadow: 10px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.profilepic {
+  max-width: 15%;
+  max-height: 15%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  float: right;
+}
+
+.resume {
+  width: 100%;
+  height: 600px;
+  border-radius: 10px;
+}
+
+.gameIcon {
+  max-width: 10%;
+  max-height: 10%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  float: left;
+  margin-right: 50px;
+}
